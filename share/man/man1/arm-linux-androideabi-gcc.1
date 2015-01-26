@@ -133,7 +133,7 @@
 .\" ========================================================================
 .\"
 .IX Title "GCC 1"
-.TH GCC 1 "2014-12-05" "gcc-4.9.3" "GNU"
+.TH GCC 1 "2015-01-13" "gcc-4.9.3" "GNU"
 .\" For nroff, turn off justification.  Always turn off hyphenation; it makes
 .\" way too many mistakes in technical documents.
 .if n .ad l
@@ -9401,6 +9401,18 @@ If number of memory accesses in function being instrumented
 is greater or equal to this number, use callbacks instead of inline checks.
 E.g. to disable inline code use
 \&\fB\-\-param asan\-instrumentation\-with\-call\-threshold=0\fR.
+.IP "\fBmax-fsm-thread-path-insns\fR" 4
+.IX Item "max-fsm-thread-path-insns"
+Maximum number of instructions to copy when duplicating blocks on a
+finite state automaton jump thread path.  The default is 100.
+.IP "\fBmax-fsm-thread-length\fR" 4
+.IX Item "max-fsm-thread-length"
+Maximum number of basic blocks on a finite state automaton jump thread
+path.  The default is 10.
+.IP "\fBmax-fsm-thread-paths\fR" 4
+.IX Item "max-fsm-thread-paths"
+Maximum number of new jump thread paths to create for a finite state
+automaton.  The default is 50.
 .RE
 .RS 4
 .RE
